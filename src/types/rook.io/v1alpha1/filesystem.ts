@@ -10,11 +10,9 @@ export interface ReplicatedSpec {
     size: number;
 }
 
-export interface PoolSpec {
-    failureDomain: "osd"|"host";
-    replicated: ReplicatedSpec;
-    erasureCoded: ErasureCodedSpec;
-}
+export type PoolSpec = {
+    failureDomain: "osd" | "host";
+} & ({replicated: ReplicatedSpec} | {erasureCoded: ErasureCodedSpec});
 
 export interface Placement {
     nodeAffinity?: NodeAffinity;

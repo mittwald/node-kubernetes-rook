@@ -4,7 +4,7 @@
 
 "@mittwald/kubernetes@^2.0.0-beta.4":
   version "2.0.0-beta.4"
-  resolved "http://npm.mittwald.it/@mittwald%2fkubernetes/-/kubernetes-2.0.0-beta.4.tgz#afe31846a16db674f1504c47b80c74b565c8b988"
+  resolved "https://registry.yarnpkg.com/@mittwald/kubernetes/-/kubernetes-2.0.0-beta.4.tgz#afe31846a16db674f1504c47b80c74b565c8b988"
   dependencies:
     "@types/lodash" "^4.14.86"
     "@types/request" "^2.0.8"

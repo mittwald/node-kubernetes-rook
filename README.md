@@ -11,7 +11,10 @@ You can install this package via NPM:
 
 ## Usage
 
-tbd.
+```typescript
+const api = new KubernetesAPI(client).extend(new RookCustomResourceAPI(client));
+const filesystems = await api.rook().v1alpha1().filesystems().list();
+```
 
 ## Supported resources
 

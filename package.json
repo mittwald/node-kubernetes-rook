@@ -4,8 +4,7 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "test:jest": "jest --verbose -w 1",
-    "test": "yarn test:jest; yarn test:compile",
+    "test": "jest --verbose -w 1",
     "compile": "tsc -p tsconfig.build.json",
     "lint": "tslint --project tsconfig.json",
     "lint-fix": "tslint --project tsconfig.json --fix"

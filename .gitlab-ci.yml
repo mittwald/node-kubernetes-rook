@@ -1,0 +1,42 @@
+before_script:
+  - curl https://gitlab.mittwald.it/snippets/10/raw | bash
+
+cache:
+  paths:
+    - node_modules/
+
+typescript-compile:
+  image: kkarczmarczyk/node-yarn:6.9
+  stage: build
+  script:
+    - yarn compile
+
+tslint:
+  image: kkarczmarczyk/node-yarn:6.9
+  stage: test
+  script:
+    - yarn lint
+
+jest:
+  image: kkarczmarczyk/node-yarn:6.9
+  stage: test
+  script:
+    - yarn test
+
+example_compile:
+  image: kkarczmarczyk/node-yarn:6.9
+  stage: test
+  script:
+    - node_modules/.bin/tsc -p tsconfig.test.json
+
+registry-publish:
+  stage: deploy
+  image: kkarczmarczyk/node-yarn:6.9
+  script:
+    - npm version from-git
+    - yarn compile
+    - cp package.json dist/
+    - cd dist/
+    - npm publish
+  only:
+    - tags

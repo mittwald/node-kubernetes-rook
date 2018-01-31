@@ -1,25 +1,7 @@
-import {NodeAffinity, PodAffinity, PodAntiAffinity, ResourceRequirements, Toleration} from "@mittwald/kubernetes/types/core/v1";
+import {ResourceRequirements} from "@mittwald/kubernetes/types/core/v1";
 import {ObjectMeta} from "@mittwald/kubernetes/types/meta/v1";
-
-export interface ErasureCodedSpec {
-    codingChunks: number;
-    dataChunks: number;
-}
-
-export interface ReplicatedSpec {
-    size: number;
-}
-
-export type PoolSpec = {
-    failureDomain: "osd" | "host";
-} & ({replicated: ReplicatedSpec} | {erasureCoded: ErasureCodedSpec});
-
-export interface Placement {
-    nodeAffinity?: NodeAffinity;
-    podAffinity?: PodAffinity;
-    podAntiAffinity?: PodAntiAffinity;
-    tolerations?: Toleration[];
-}
+import {PoolSpec} from "./pool";
+import {Placement} from "./placement";
 
 export interface MetadataServerSpec {
     activeCount: number;

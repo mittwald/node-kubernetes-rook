@@ -19,7 +19,10 @@ const filesystems = await api.rook().v1alpha1().filesystems().list();
 ## Supported resources
 
 - rook.io/v1alpha1
-    - filesystem
+    - Cluster
+    - Filesystem
+    - ObjectStore
+    - Pool
 
 ## References
 

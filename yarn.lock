@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@mittwald/kubernetes@^2.0.0-beta.4":
-  version "2.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@mittwald/kubernetes/-/kubernetes-2.0.0-beta.4.tgz#afe31846a16db674f1504c47b80c74b565c8b988"
+"@mittwald/kubernetes@^2.0.0-beta.6":
+  version "2.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@mittwald/kubernetes/-/kubernetes-2.0.0-beta.6.tgz#24dc1668343d5ad33246db9809d300214148d3ea"
   dependencies:
     "@types/lodash" "^4.14.86"
     "@types/request" "^2.0.8"

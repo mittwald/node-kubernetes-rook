@@ -11,13 +11,12 @@
   },
   "author": "Martin Helmich <m.helmich@mittwald.de>",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@mittwald/kubernetes": "^2.0.0-beta.4"
   },
   "devDependencies": {
-    "@mittwald/kubernetes": "^2.0.0-beta.4",
+    "@mittwald/kubernetes": "^2.0.0-beta.6",
     "@types/jest": "^21.1.8",
     "@types/nock": "^8.2.1",
     "jest": "^21.2.1",
